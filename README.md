@@ -13,11 +13,12 @@ It's not fancy but it is functional.
 * Start the command server: `node rce.js`. Note the server IP and port.
 * Add the `rce-client.js` file to your HTML document.
 * In your HTML document call `rce.start(IP:PORT)` with the IP and port of your server.
+  * Server is CORS enabled
 * Type commands into the server terminal window.
   * Hitting enter sends the commands
   * You can type as many commands as you want
 * `> COMMAND` is displayed when a command is sent to the client
-* '< COMMAND = RESULT' is displayed when a commands result is sent to the server.
+* `< COMMAND = RESULT` is displayed when a commands result is sent to the server.
 
 ## Example
 
