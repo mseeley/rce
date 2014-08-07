@@ -70,7 +70,9 @@ var server = http.createServer(function (request, response) {
 
 });
 
-server.listen(8000);
+// FIXME: Accept port number on cli
+var port = 8001;
+server.listen(port);
 
 // http://stackoverflow.com/questions/10750303/how-can-i-get-the-local-ip-address-in-node-js
 var os = require('os');
@@ -86,7 +88,7 @@ for (k in interfaces) {
     }
 }
 
-console.log('Server running at http://%s:8000/', addresses[0]);
+console.log('Server running at http://%s:%d/', addresses[0], port);
 
 // -----------------------------------------------------------------------------
 

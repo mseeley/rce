@@ -81,14 +81,22 @@ var rce = (function () {
     start: function (commandServer) {
       server = commandServer;
       console.log('RCE started');
+      // FIXME: No this!
+      this.post('RCE Client connected');
       halted = false;
       checkForCommand();
     },
     stop: function () {
       halted = true;
+    },
+    post: function (message) {
+      var fauxCommand = {
+        text: 'MESSAGE'
+      };
+      if (server) {
+        postResult(fauxCommand, message);
+      }
     }
   };
 
 }());
-
-rce.start('http://127.0.0.1:8000/');
